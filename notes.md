@@ -137,8 +137,8 @@ git push origin --delete 15.0-feature-tri
 Usually `main` is the production branch, the code running on the client Odoo instance.
 It may be behind `preproduction` by a few commits and **shouldn't diverge from it**,
 that is to say `preproduction` is a direct descendant of `main`.
-If it's not the case, you might ask yourself, what is on `main` and not on `preproduction` ?
-What are tests on `preproduction` worth is some code is missing ?
+If it's not the case, it's a recipe for bad surprises when pushing code to production.
+
 
 The extra commits in the preproduction branch contains the development being tested before being pushed in production.
 These branches are sometime write protected and in any case you probably shouln't push unreviewed code on them.
